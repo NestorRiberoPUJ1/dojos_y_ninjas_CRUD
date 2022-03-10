@@ -15,11 +15,12 @@
         <form action="/create" method="POST" class="col-6 mx-auto">
             <h1>New Ninja</h1>
             <div class="form-group">
-                <label for="dojo">Dojo</label>
-                <select name="dojo" id="dojo" class="form-control">
+                <input type="hidden" name="type" id="type" value="ninjas">
+                <label for="dojo_id">Dojo</label>
+                <select name="dojo_id" id="dojo_id" class="form-control">
                     <option value="" disabled selected>Select a Dojo</option>
                     {% for dojo in dojos %}
-                    <option value="{{dojo.name}}" >{{dojo.name}}</option>
+                    <option value="{{dojo.id}}" >{{dojo.name}}</option>
                     {% endfor%}
                 </select>
             </div>
@@ -40,6 +41,7 @@
             </div>
 
         </form>
+        <a href="/dojos">Home</a>
     </div>
 </body>
 

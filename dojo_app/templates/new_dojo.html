@@ -15,6 +15,7 @@
         <form action="/create" method="POST" class="col-6 mx-auto">
             <h1>New Dojo</h1>
             <div class="form-group">
+                <input type="hidden" name="type" id="type" value="dojos">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" class="form-control">
             </div>
@@ -26,12 +27,13 @@
         <div class="container col-6 mx-auto">
             <h1>All Dojos</h1>
             <label for=""></label>
-            <div class="container border-2 border">
-                <ul class="p-0 pt-2">
+            <div class="container p-0">
+                <ul class="p-2 border-2 border">
                     {% for dojo in dojos %}
-                    <li value="{{dojo.name}}" class="list-unstyled border-bottom mx-0 font"><a href="{{dojo.id}}">{{dojo.name}}</a></li>
+                    <li value="{{dojo.name}}" class="list-unstyled border-bottom mx-0 font"><a href="dojos/{{dojo.id}}">{{dojo.name}}</a></li>
                     {% endfor%}
                 </ul>
+                <a href="/ninjas">Add ninja</a>
             </div>
         </div>
 
