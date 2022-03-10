@@ -1,7 +1,6 @@
 from dojo_app.config.mysqlconnection import connectToMySQL
 from dojo_app.models.ninja import Ninja
 
-
 class Dojo:
 
     def __init__(self,data):
